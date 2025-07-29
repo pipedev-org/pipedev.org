@@ -1,10 +1,11 @@
-
-html,body {
+html,
+body {
     font-family: Tahoma, Verdana, sans-serif;
     margin: 0px;
     width: 100%;
     color: #404040;
 }
+
 p {
     font-family: Arial, Helvetica, sans-serif;
 }
@@ -12,6 +13,7 @@ p {
 a {
     color: rgb(46, 196, 255);
 }
+
 a:visited {
     color: rgb(182, 26, 202);
 }
@@ -20,6 +22,7 @@ a:visited {
     text-align: center;
     width: 100%;
 }
+
 .hero>h1 {
     display: inline-block;
     margin: 50px 0px;
@@ -32,6 +35,7 @@ a:visited {
     border-bottom: 1px solid #AAB;
     text-align: center;
 }
+
 .navbar a {
     color: #AAB;
     display: inline-block;
@@ -42,7 +46,8 @@ a:visited {
     text-transform: uppercase;
     top: 2px;
 }
-.navbar a.current{
+
+.navbar a.current {
     text-decoration: underline;
 }
 
@@ -59,7 +64,8 @@ a:visited {
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
 }
 
 .tooltip .tooltip-text {
@@ -92,25 +98,50 @@ blockquote>p {
     text-align: center;
     color: #AAB;
 }
-.footer a.button {
-    border: 1px solid #AAB;
+
+.button-wrapper {
+    text-align: center;
+}
+
+a.button {
+    border: 1px solid skyblue;
     border-radius: 5px;
-    color: #AAB;
+    color: black;
+    background-color: lightskyblue;
     text-decoration: none;
     padding: 10px;
     font-variant: small-caps;
     display: inline-block;
     margin-bottom: 10px;
 }
-.footer a.button:hover{
-    background-color: #AAB;
-    color:white;
+
+a.button:hover {
+    background-color: transparent;
 }
+
+.footer a.button {
+    border: 1px solid #AAB;
+    border-radius: 5px;
+    color: #AAB;
+    background-color: transparent;
+    text-decoration: none;
+    padding: 10px;
+    font-variant: small-caps;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+.footer a.button:hover {
+    background-color: #AAB;
+    color: white;
+}
+
 .footer p {
     font-style: italic;
     margin: 2px;
 }
-.footer a{
+
+.footer a {
     color: #AAB;
 }
 

@@ -119,21 +119,190 @@ a.button:hover {
     background-color: transparent;
 }
 
-.footer a.button {
-    border: 1px solid #AAB;
-    border-radius: 5px;
-    color: #AAB;
-    background-color: transparent;
-    text-decoration: none;
-    padding: 10px;
-    font-variant: small-caps;
-    display: inline-block;
-    margin-bottom: 10px;
+.card-wall {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 32px 0 40px;
 }
 
-.footer a.button:hover {
-    background-color: #AAB;
-    color: white;
+.card-wall-socials {
+    display: grid;
+    grid-template-columns: repeat(5, 88px);
+    justify-content: center;
+    gap: 10px;
+}
+
+.link-card {
+    --logo-rainbow: conic-gradient(
+        from -30deg,
+        #e63b4b 0deg,
+        #f1a917 45deg,
+        #85c74b 90deg,
+        #28bba9 135deg,
+        #03ade0 180deg,
+        #2b77c2 210deg,
+        #5742a7 240deg,
+        #62309f 270deg,
+        #c91c92 315deg,
+        #e63b4b 360deg
+    );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    text-align: center;
+    text-decoration: none;
+    color: #404040;
+    border: 2.5px solid transparent;
+    border-radius: 8px;
+    background:
+        linear-gradient(#ffffff, #ffffff) padding-box,
+        var(--logo-rainbow) border-box;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+    transition: color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.link-card:visited {
+    color: #404040;
+}
+
+.link-card:hover {
+    color: #404040;
+    background:
+        linear-gradient(#f7f8fa, #f7f8fa) padding-box,
+        var(--logo-rainbow) border-box;
+    background-origin: border-box;
+    background-clip: padding-box, border-box;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+}
+
+.link-card-square {
+    aspect-ratio: 1;
+    width: 88px;
+    padding: 10px 6px;
+    gap: 8px;
+    box-sizing: border-box;
+}
+
+.link-card-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.link-card-row {
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+    padding: 16px 18px;
+    text-align: left;
+}
+
+.link-card-row .link-card-icon {
+    width: 32px;
+    height: 32px;
+}
+
+.link-card-row-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+    min-width: 0;
+}
+
+.link-card-label {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    font-size: 65%;
+    line-height: 1.2;
+}
+
+.link-card-row .link-card-label {
+    font-size: 95%;
+}
+
+.link-card-meta {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 85%;
+    font-style: italic;
+    line-height: 1.4;
+    opacity: 0.75;
+    text-transform: none;
+    font-weight: normal;
+    letter-spacing: 0;
+}
+
+.social-links--footer {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    margin: 0 auto 24px;
+    width: max-content;
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.social-links--footer .link-card {
+    border: none;
+    background: transparent;
+    box-shadow: none;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.social-links--footer .link-card:hover {
+    background: linear-gradient(#f7f8fa, #f7f8fa);
+    box-shadow: none;
+}
+
+.social-links--footer .link-card-square {
+    width: 54px;
+    padding: 6px 2px;
+    gap: 4px;
+}
+
+.social-links--footer .link-card-icon {
+    width: 17px;
+    height: 17px;
+}
+
+.social-links--footer .link-card-label {
+    font-size: 50%;
+}
+
+@media (max-width: 520px) {
+    .card-wall-socials {
+        grid-template-columns: repeat(3, 88px);
+    }
+
+    .social-links--footer {
+        gap: 2px;
+    }
+
+    .social-links--footer .link-card-square {
+        width: 44px;
+        padding: 4px 1px;
+        gap: 3px;
+    }
+
+    .social-links--footer .link-card-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .social-links--footer .link-card-label {
+        font-size: 45%;
+    }
 }
 
 .footer p {

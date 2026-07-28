@@ -1,0 +1,34 @@
+<div id="newsletter-success-banner" class="newsletter-success-banner" hidden role="status" aria-live="polite">
+    <p class="newsletter-success-banner__text">You're subscribed! Thanks for joining the newsletter.</p>
+    <button type="button" class="newsletter-success-banner__dismiss" aria-label="Dismiss">×</button>
+</div>
+<script>
+    (function () {
+        var params = new URLSearchParams(window.location.search);
+        if (params.get("newsletter") !== "success") {
+            return;
+        }
+
+        var banner = document.getElementById("newsletter-success-banner");
+        if (!banner) {
+            return;
+        }
+
+        banner.hidden = false;
+        banner.removeAttribute("hidden");
+
+        var url = new URL(window.location.href);
+        url.searchParams.delete("newsletter");
+        window.history.replaceState({}, "", url.pathname + url.search + url.hash);
+
+        var dismiss = banner.querySelector(".newsletter-success-banner__dismiss");
+        if (!dismiss) {
+            return;
+        }
+
+        dismiss.addEventListener("click", function () {
+            banner.hidden = true;
+            banner.setAttribute("hidden", "");
+        });
+    })();
+</script>

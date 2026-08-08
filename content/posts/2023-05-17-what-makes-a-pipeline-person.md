@@ -56,7 +56,23 @@ In the end, we settled on a general ratio of 60:40, where it can swing back and 
 
 Often, a support ticket requires code to be changed so how do you decide what is support and what is development. Triage and troubleshooting work is definitely support, for sure, but we still went back and forth on the differentiation for some time. In the end, the best distinction that we could muster was that any work related to maintaining a workflow or bit of functionality in the pipeline was support, and any change, addition, or augmentation to a workflow of bit of functionality should be considered development.
 
-The hardest test of this definition is work that you need to do to make something faster because it can no longer support the scale of work passing through it. Ultimately, we decided that this is development because that something was built for a smaller scale, and is still working as such. You are therefore augmenting the tool in order to support this new requirement, which makes the work development, not support. 
+The hardest test of this definition is work that you need to do to make something faster because it can no longer support the scale of work passing through it. Ultimately, we decided that this is development because that something was built for a smaller scale, and is still working as such. You are therefore augmenting the tool in order to support this new requirement, which makes the work development, not support.
+
+#### The "intended capabilities" Distinction
+
+This destinction, where we are augmenting a tool beyond the limits of what it was built for, includes a particularly interesting insight. It hints at some kind of distinction around the capabilities which the pipeline was built for. If it was built with the intention of only being used at a smaller scale, then it is *development* when we expand the capabilities to include working at a larger scale. If it was already built with the intention of being used at a larger scale, then it is actually *support* if scenarios are found where it fails to meet that capability.
+
+This categorisation mechanism is particularly challenging to use effectively when the intended capabilities of the pipeline are at all vague. In an ideal world, all capabilities are perfectly documented, such that everything that doesn't work "as advertised" leads to support, and everything beyond that is development. This is particularly challenging to define in the fast paced, dynamic, and complex environment of VFX pipelines. Despite this, it can still be very useful to use this disctinction when categorisating between *support* and *development* if we leave it open to reasonable interpretation, and foster an open, collaborative, and constructive culture to avoid abuse.
+
+Here is an example categorisation of all Pipeline tasks which utilizes intended capabilities to distinguish between support and development:
+* **Strategic Dev**: Enhancements to the capabilities of the tools and pipeline which are planned and prioritised through a global roadmap shaped by stakeholders (CapEx/OpEx mix).
+* **Tactical Dev**: Enhancements to the capabilities of the tools and pipeline which are prioritised above strategic development because they are reasonably required for the immediate needs of specific productions.
+* **Show Specific Tactical Dev**: This is a subcategory of Tactical Dev where the development made is only ever intended to be used on a particular production. (OpEx)
+* **Strategically Aligned Tactical Dev**: Subcategory of Tactical Dev where there is progress towards the wider strategic direction, even if the progress is less optimally achieved (CapEx/OpEx mix). Strategically unaligned Tactical Dev can only be OpEx.
+* **Pipeline Support**: Debugging, dev fixes, and general help, where the tools and pipeline do not seem to be working to their intended capabilities. (OpEx)
+* **Production Support**: Debugging, asset fixes, configuration, setup, and general help where there is no reason to suspect the tools and pipeline are not working to their intended capabilities. (OpEx)
+* **Triage**: Assessing the incoming requests into the above categories and starting the process for prioritisation or assignment. (OpEx)
+
 
 ### Spreading the Word
 

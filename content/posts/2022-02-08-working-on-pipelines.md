@@ -12,7 +12,7 @@ As with the last couple of meetings, I tried to run things in a general lean cof
 
 ### What is a pipeline?
 
-…Was a great first question! We tried our best to define what we're really talking about when we say "working on a pipline".
+…Was a great first question! We tried our best to define what we're really talking about when we say "working on a pipeline".
 
 Some of the initial definitions that were proposed were around the idea of data transfer and translation, as well as automation. Although these things are definitely a big part of what pipeline software need to do, they are not a complete definition on their own.
 We also talked about the idea of removing friction for artists and production. One could argue that a pipeline's job is to do pretty much anything that allows these folks to do their jobs more effectively and efficiently.

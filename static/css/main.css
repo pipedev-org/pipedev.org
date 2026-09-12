@@ -239,3 +239,32 @@ a.button:hover { background-color: transparent; color: var(--color-cyan); }
 
 pre { background-color: #11161c !important; color: var(--color-body); border: 1px solid var(--color-hairline); border-radius: 8px; padding: 14px; overflow-x: auto; font-family: var(--font-mono); font-size: .88em; }
 code { font-family: var(--font-mono); }
+
+/* ---- social squares: solid single-colour borders stepping through the spectrum ----
+   The row cards (community / events / TPC) keep the full rainbow gradient border;
+   these five step along it one hue each, in order. */
+.card-wall-socials .link-card,
+.social-links--footer .link-card {
+    background: var(--color-bg-panel);
+    border: 2px solid var(--color-hairline);
+}
+.card-wall-socials .link-card:hover {
+    background: var(--color-bg-raise);
+}
+.card-wall-socials .link-card:nth-child(1) { border-color: var(--spectrum-orange); }
+.card-wall-socials .link-card:nth-child(2) { border-color: var(--spectrum-amber); }
+.card-wall-socials .link-card:nth-child(3) { border-color: var(--spectrum-green); }
+.card-wall-socials .link-card:nth-child(4) { border-color: var(--spectrum-cyan); }
+.card-wall-socials .link-card:nth-child(5) { border-color: var(--spectrum-blue); }
+.card-wall-socials .link-card:nth-child(6) { border-color: var(--spectrum-purple); }
+
+.card-wall-socials .link-card:nth-child(1) .link-card-icon { color: var(--spectrum-orange); }
+.card-wall-socials .link-card:nth-child(2) .link-card-icon { color: var(--spectrum-amber); }
+.card-wall-socials .link-card:nth-child(3) .link-card-icon { color: var(--spectrum-green); }
+.card-wall-socials .link-card:nth-child(4) .link-card-icon { color: var(--spectrum-cyan); }
+.card-wall-socials .link-card:nth-child(5) .link-card-icon { color: var(--spectrum-blue); }
+.card-wall-socials .link-card:nth-child(6) .link-card-icon { color: var(--spectrum-purple); }
+
+/* the footer strip stays quiet - no borders there */
+.social-links--footer .link-card { border-color: transparent; background: transparent; }
+.social-links--footer .link-card:hover { background: rgba(255, 255, 255, .06); }

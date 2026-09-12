@@ -44,6 +44,12 @@
     --font-mono: 'IBM Plex Mono', ui-monospace, 'SFMono-Regular', monospace;
 }
 
+/* Inherited from the old theme: nothing set box-sizing, so any element with
+   width:100% plus side padding (the hero) overflowed the viewport by its
+   padding, and the full-width bands then looked short when the page was
+   scrolled sideways. */
+*, *::before, *::after { box-sizing: border-box; }
+
 html, body {
     font-family: var(--font-body);
     margin: 0;
@@ -72,7 +78,11 @@ a:hover { color: var(--color-amber); }
     border-image: var(--gradient-spectrum) 1;
 }
 
-.hero img { display: inline-block; }
+.hero img {
+    display: inline-block;
+    max-width: 100%;
+    height: auto;
+}
 
 .hero > h1 {
     display: inline-block;

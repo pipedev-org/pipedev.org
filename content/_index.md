@@ -1,5 +1,10 @@
 ---
 title: "Home"
+status_notice:
+  show: true
+  flag: "TPC 2026"
+  title: "The Pipeline Conference has moved online — and it is free"
+  body: 'Our in-person conference in Vancouver on 17 September 2026 was cancelled. The programme is running online instead: two free half-day events from October, followed by the tenth Pipeline Awards in December. <a href="https://thepipelineconference.com/2026-event-schedule/">See the 2026 programme</a>.'
 ---
 
 ## About Us

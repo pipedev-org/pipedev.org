@@ -2,6 +2,9 @@
 <html>
 
 <head>
+    <meta charset="utf-8" />
+    <title>{{ .Site.Title }}</title>
+    <meta name="color-scheme" content="dark" />
     {{ partial "stylesheets" . }}
 </head>
 
@@ -9,6 +12,7 @@
     {{ partial "newsletter-success-banner.html" . }}
     {{ partial "hero.html" . }}
     {{ partial "navbar.html" . }}
+    {{ partial "status-notice.html" . }}
     {{ partial "content.html" . }}
     {{ partial "footer.html" . }}
 </body>

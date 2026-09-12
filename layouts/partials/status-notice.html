@@ -1,0 +1,15 @@
+{{/* Site-wide status notice, driven by status_notice in the home page front matter. */}}
+{{ $home := site.GetPage "/" }}
+{{ with $home.Params.status_notice }}
+{{ if .show }}
+<aside class="status-notice" role="note">
+    <div class="status-notice-inner">
+        <span class="status-notice-flag">{{ default "Notice" .flag }}</span>
+        <div class="status-notice-body">
+            <p class="status-notice-title">{{ .title }}</p>
+            <p class="status-notice-text">{{ .body | safeHTML }}</p>
+        </div>
+    </div>
+</aside>
+{{ end }}
+{{ end }}

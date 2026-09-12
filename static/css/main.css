@@ -78,11 +78,7 @@ a:hover { color: var(--color-amber); }
     border-image: var(--gradient-spectrum) 1;
 }
 
-.hero img {
-    display: inline-block;
-    max-width: 100%;
-    height: auto;
-}
+.hero img { display: inline-block; }
 
 .hero > h1 {
     display: inline-block;
@@ -131,11 +127,13 @@ a:hover { color: var(--color-amber); }
 /* ---- tooltip ---- */
 .tooltip { position: relative; display: inline-block; border-bottom: 1px dotted var(--color-muted); }
 .tooltip .tooltip-text {
-    visibility: hidden; width: 240px; background-color: var(--color-bg-raise);
+    /* display:none rather than visibility:hidden - a hidden-but-laid-out
+       tooltip sticks 240px out of its parent and scrolls the page sideways. */
+    display: none; width: 240px; background-color: var(--color-bg-raise);
     color: var(--color-body); text-align: center; padding: 6px 0; border-radius: 8px;
     position: absolute; left: -120px; top: 100%; z-index: 1; border: 1px solid var(--color-hairline);
 }
-.tooltip:hover .tooltip-text { visibility: visible; }
+.tooltip:hover .tooltip-text { display: block; }
 
 blockquote > p { border-left: 3px solid var(--color-cyan); color: var(--color-muted); padding-left: 14px; }
 
@@ -230,6 +228,13 @@ a.button:hover { background-color: transparent; color: var(--color-cyan); }
 .social-links--footer .link-card-square { width: 54px; padding: 6px 2px; gap: 4px; }
 .social-links--footer .link-card-icon { width: 17px; height: 17px; }
 .social-links--footer .link-card-label { font-size: 50%; }
+
+@media (max-width: 440px) {
+    /* The hero logo is 401px wide at its natural 150px height, so it only needs
+       constraining once the screen is narrower than that. Above this width it
+       renders exactly as it always has. */
+    .hero img { max-width: 100%; height: auto; }
+}
 
 @media (max-width: 520px) {
     .card-wall-socials { grid-template-columns: repeat(3, 88px); }

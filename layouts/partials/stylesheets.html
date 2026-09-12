@@ -1,2 +1,7 @@
-<link type="text/css" rel="stylesheet" href="/css/main.css" />
-<link type="text/css" rel="stylesheet" href="/css/block.css" />
+{{/* Fingerprinted so the filename changes whenever the CSS does. Browsers and the
+     GitHub Pages CDN cache /css/main.<hash>.css forever and simply fetch a new URL
+     on the next deploy, instead of serving a stale stylesheet. */}}
+{{ $main := resources.Get "css/main.css" | fingerprint "sha256" }}
+{{ $block := resources.Get "css/block.css" | fingerprint "sha256" }}
+<link type="text/css" rel="stylesheet" href="{{ $main.RelPermalink }}" />
+<link type="text/css" rel="stylesheet" href="{{ $block.RelPermalink }}" />

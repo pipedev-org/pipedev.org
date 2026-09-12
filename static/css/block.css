@@ -7,50 +7,50 @@
 
 .block.click-block {
     border-radius: 0px;
-    border-bottom: 1px solid #BBB;
+    border-bottom: 1px solid var(--color-hairline);
     cursor: pointer;
     transition: background-color 0.2s;
 }
 .block.click-block:hover{
-    background-color: #EEE;
+    background-color: var(--color-bg-raise);
 }
 
 .block h1 {
     font-size: 32px;
-    font-variant: small-caps;
-    font-weight: normal;
+    font-variant: normal;
+    font-weight: 700;
 }
 .block h1::first-letter {
-    font-weight: lighter;
+    font-weight: 700;
 }
 .block h2 {
     font-size: 28px;
-    font-variant: small-caps;
-    font-weight: normal;
+    font-variant: normal;
+    font-weight: 700;
 }
 .block h2::first-letter {
-    font-weight: lighter;
+    font-weight: 700;
 }
 .block h3 {
     font-size: 24px;
-    font-variant: small-caps;
-    font-weight: normal;
+    font-variant: normal;
+    font-weight: 700;
 }
 .block h3::first-letter {
-    font-weight: lighter;
+    font-weight: 700;
 }
 .block h4 {
     font-size: 20px;
-    font-variant: small-caps;
-    font-weight: normal;
+    font-variant: normal;
+    font-weight: 700;
 }
 .block h5::first-letter {
-    font-weight: lighter;
+    font-weight: 700;
 }
 
 .block p {
     width: 100%;
-    text-align: justify;
+    text-align: left;
 }
 
 .block img {
